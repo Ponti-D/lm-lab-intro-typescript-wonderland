@@ -28,7 +28,7 @@ export function afterWokenUp(): void {
 
   tarts.forEach((h, i) => print(`${i} - ${h}`));
 
-  return askQuestion(", which tart do you fancy eating:  ", eatingTart);
+  return askQuestion("Which of these tarts do you fancy eating?  ", eatingTart);
 }
 
 export function eatingTart(tart: string): void {
