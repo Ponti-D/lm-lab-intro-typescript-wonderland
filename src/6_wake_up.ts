@@ -1,5 +1,6 @@
 import { endAdventure, haveAdventures } from '..';
 import { askQuestion, clear, print } from '../console';
+import {afterWokenUp} from './7_breakfast_time';
 
 // This is a very unusual type setup. It's pobably not a great idea in the real world to nest so 
 //many properties
@@ -31,14 +32,10 @@ export function wakeUp(): void {
 		print('You have awoken in your bed 🛏 What a lovely dream.');
 		print('Although...❓❓❓');
 		print('What are these tarts doing here?! 🥧🥧🥧🥧🥧🥧 🤔');
-
-		print(
-			'✅ CONGRATULATIONS! You successfully made it through Wonderland! 🥳'
-		);
-
+		
 		return askQuestion(
-			'Press ENTER to re-enter Wonderland! ',
-			haveAdventures
+			'Press ENTER to get out of your bed! ',
+			afterWokenUp
 		);
 	} else {
 		print('You are unable to wake up! 😱');
